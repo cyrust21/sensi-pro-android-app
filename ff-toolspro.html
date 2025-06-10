@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF TOOLSPRO+ - Free Fire Tools Terlengkap untuk Android</title>
+    <meta name="description" content="FF TOOLSPRO+ - Aplikasi tools Free Fire terlengkap dengan kalkulator sensitivitas akurat, tips pro, dan fitur premium untuk meningkatkan gameplay Anda!">
+    <meta name="author" content="FF TOOLSPRO+ Team">
+    <meta name="keywords" content="Free Fire, FF Tools, Sensitivity Calculator, Gaming Tools, Android, FFMAX, Pro Tools">
+    
+    <meta property="og:title" content="FF TOOLSPRO+ - Free Fire Tools Terlengkap">
+    <meta property="og:description" content="Tools Free Fire terlengkap dengan kalkulator sensitivitas akurat dan fitur pro lainnya!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://iili.io/3pCmLNa.png">
+    
+    <meta name="theme-color" content="#8b5cf6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #7c3aed 50%, #1e293b 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 1rem 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+        }
+        
+        .logo-text h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #c084fc;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #7c3aed, #ec4899);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #6d28d9, #db2777);
+        }
+        
+        .btn-secondary {
+            background: #eab308;
+            color: black;
+        }
+        
+        .btn-secondary:hover {
+            background: #facc15;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 2rem 0 3rem;
+        }
+        
+        .hero-logo {
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto 1.5rem;
+            border-radius: 1rem;
+            border: 4px solid #8b5cf6;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .badge {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .badge-purple {
+            background: linear-gradient(45deg, #7c3aed, #ec4899);
+        }
+        
+        .badge-green {
+            background: linear-gradient(45deg, #059669, #10b981);
+        }
+        
+        .badge-orange {
+            background: linear-gradient(45deg, #ea580c, #dc2626);
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-title {
+            color: #c084fc;
+        }
+        
+        .feature-description {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Calculator Styles */
+        .calculator {
+            max-width: 64rem;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .calculator-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .calculator-icon {
+            padding: 0.75rem;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            border-radius: 0.75rem;
+            font-size: 2rem;
+        }
+        
+        .calculator-title h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .calculator-title p {
+            color: #c084fc;
+        }
+        
+        .calculator-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .input-section h3,
+        .result-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        
+        .input-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #c084fc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .slider-container {
+            position: relative;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 0.75rem;
+            background: #374151;
+            border-radius: 0.5rem;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            cursor: pointer;
+            border: 2px solid #1f2937;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            cursor: pointer;
+            border: 2px solid #1f2937;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+        }
+        
+        .slider-range {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+        
+        .select {
+            width: 100%;
+            padding: 0.75rem;
+            background: #374151;
+            color: white;
+            border: 1px solid #4b5563;
+            border-radius: 0.5rem;
+            outline: none;
+        }
+        
+        .select:focus {
+            border-color: #8b5cf6;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .result-card {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid;
+            margin-bottom: 1rem;
+        }
+        
+        .result-card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .result-purple {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        
+        .result-blue {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .result-green {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+        
+        .result-red {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        
+        .result-yellow {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: rgba(245, 158, 11, 0.5);
+            border-width: 2px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .true-sens-label {
+            color: #fbbf24;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .true-sens-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .true-sens-desc {
+            font-size: 0.75rem;
+            color: #fbbf24;
+            margin-top: 0.5rem;
+        }
+        
+        .tips-card {
+            padding: 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .tips-title {
+            color: #93c5fd;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tips-list {
+            list-style: none;
+        }
+        
+        .tips-list li {
+            color: #bfdbfe;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .calculator-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="https://iili.io/3pCmLNa.png" alt="FF TOOLSPRO+ Logo" class="logo">
+                    <div class="logo-text">
+                        <h2>FF TOOLSPRO+</h2>
+                        <p>v2.0 Premium</p>
+                    </div>
+                </div>
+                
+                <div class="header-buttons">
+                    <button class="btn btn-primary">
+                        📥 Download APK
+                    </button>
+                    <button class="btn btn-secondary">
+                        ⭐ Rate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <img src="https://iili.io/3pCmLNa.png" alt="FF TOOLSPRO+ Logo" class="hero-logo">
+            <h1 class="hero-title">FF TOOLSPRO+</h1>
+            <p class="hero-description">
+                Tools terlengkap untuk Free Fire! Kalkulator sensitivitas akurat, tips pro, dan fitur premium lainnya.
+            </p>
+            <div class="hero-badges">
+                <span class="badge badge-purple">⚡ Update Terbaru</span>
+                <span class="badge badge-green">🎯 100% Akurat</span>
+                <span class="badge badge-orange">🔥 Pro Features</span>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(45deg, #3b82f6, #8b5cf6);">🧮</div>
+                <h3 class="feature-title">Sensitivity Calculator</h3>
+                <p class="feature-description">Kalkulator sensitivitas akurat dengan maksimal 200 sensitivity</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(45deg, #10b981, #059669);">🎯</div>
+                <h3 class="feature-title">Aim Training</h3>
+                <p class="feature-description">Tips dan trik untuk meningkatkan akurasi aim Anda</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(45deg, #f59e0b, #ea580c);">⚡</div>
+                <h3 class="feature-title">Pro Settings</h3>
+                <p class="feature-description">Pengaturan pro player untuk performa maksimal</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(45deg, #8b5cf6, #ec4899);">🛡️</div>
+                <h3 class="feature-title">Game Booster</h3>
+                <p class="feature-description">Optimasi device untuk gameplay yang lebih smooth</p>
+            </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="calculator">
+            <div class="calculator-header">
+                <div class="calculator-icon">🧮</div>
+                <div class="calculator-title">
+                    <h2>Sensitivity Calculator</h2>
+                    <p>Kalkulator sensitivitas FF yang paling akurat</p>
+                </div>
+            </div>
+
+            <div class="calculator-content">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <h3>🎯 Input Settings</h3>
+                    
+                    <div class="input-group">
+                        <label class="input-label">General Sensitivity: <span id="generalValue">50</span></label>
+                        <div class="slider-container">
+                            <input type="range" id="generalSens" class="slider" min="1" max="200" value="50">
+                            <div class="slider-range">
+                                <span>1</span>
+                                <span>200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Red Dot Sensitivity: <span id="redDotValue">50</span></label>
+                        <div class="slider-container">
+                            <input type="range" id="redDotSens" class="slider" min="1" max="200" value="50">
+                            <div class="slider-range">
+                                <span>1</span>
+                                <span>200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">2x-4x Scope Sensitivity: <span id="scopeValue">50</span></label>
+                        <div class="slider-container">
+                            <input type="range" id="scopeSens" class="slider" min="1" max="200" value="50">
+                            <div class="slider-range">
+                                <span>1</span>
+                                <span>200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Sniper Sensitivity: <span id="sniperValue">50</span></label>
+                        <div class="slider-container">
+                            <input type="range" id="sniperSens" class="slider" min="1" max="200" value="50">
+                            <div class="slider-range">
+                                <span>1</span>
+                                <span>200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">DPI Mouse/Touch: <span id="dpiValue">400</span></label>
+                        <select id="dpi" class="select">
+                            <option value="200">200 DPI</option>
+                            <option value="400" selected>400 DPI</option>
+                            <option value="800">800 DPI</option>
+                            <option value="1200">1200 DPI</option>
+                            <option value="1600">1600 DPI</option>
+                            <option value="2400">2400 DPI</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn" style="background: #4b5563; color: white;" onclick="resetValues()">
+                            🔄 Reset
+                        </button>
+                        <button class="btn" style="background: linear-gradient(45deg, #10b981, #059669); color: white;" onclick="copySettings()">
+                            📋 Copy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result Section -->
+                <div class="result-section">
+                    <h3>📊 Calculated Results</h3>
+                    
+                    <div class="result-card result-purple">
+                        <div class="result-card-content">
+                            <span style="color: #c084fc;">General</span>
+                            <span class="result-value" id="generalResult">1.00</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card result-blue">
+                        <div class="result-card-content">
+                            <span style="color: #93c5fd;">Red Dot</span>
+                            <span class="result-value" id="redDotResult">0.85</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card result-green">
+                        <div class="result-card-content">
+                            <span style="color: #86efac;">2x-4x Scope</span>
+                            <span class="result-value" id="scopeResult">0.70</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card result-red">
+                        <div class="result-card-content">
+                            <span style="color: #fca5a5;">Sniper</span>
+                            <span class="result-value" id="sniperResult">0.50</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card result-yellow">
+                        <div class="true-sens-label">True Sensitivity</div>
+                        <div class="true-sens-value" id="trueSensResult">0.82</div>
+                        <div class="true-sens-desc">Sensitivitas gabungan optimal</div>
+                    </div>
+
+                    <div class="tips-card">
+                        <h4 class="tips-title">💡 Pro Tips:</h4>
+                        <ul class="tips-list">
+                            <li>• Mulai dengan sensitivitas rendah untuk akurasi lebih baik</li>
+                            <li>• Sesuaikan DPI dengan device Anda</li>
+                            <li>• Latih konsistensi dengan setting yang sama</li>
+                            <li>• True Sens di bawah 2.0 = Akurasi tinggi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sensitivity Calculator Logic
+        let generalSens = 50;
+        let redDotSens = 50;
+        let scopeSens = 50;
+        let sniperSens = 50;
+        let dpi = 400;
+
+        // Get elements
+        const generalSlider = document.getElementById('generalSens');
+        const redDotSlider = document.getElementById('redDotSens');
+        const scopeSlider = document.getElementById('scopeSens');
+        const sniperSlider = document.getElementById('sniperSens');
+        const dpiSelect = document.getElementById('dpi');
+
+        const generalValueSpan = document.getElementById('generalValue');
+        const redDotValueSpan = document.getElementById('redDotValue');
+        const scopeValueSpan = document.getElementById('scopeValue');
+        const sniperValueSpan = document.getElementById('sniperValue');
+        const dpiValueSpan = document.getElementById('dpiValue');
+
+        const generalResult = document.getElementById('generalResult');
+        const redDotResult = document.getElementById('redDotResult');
+        const scopeResult = document.getElementById('scopeResult');
+        const sniperResult = document.getElementById('sniperResult');
+        const trueSensResult = document.getElementById('trueSensResult');
+
+        // Event listeners
+        generalSlider.addEventListener('input', function() {
+            generalSens = parseInt(this.value);
+            generalValueSpan.textContent = generalSens;
+            calculateSensitivity();
+        });
+
+        redDotSlider.addEventListener('input', function() {
+            redDotSens = parseInt(this.value);
+            redDotValueSpan.textContent = redDotSens;
+            calculateSensitivity();
+        });
+
+        scopeSlider.addEventListener('input', function() {
+            scopeSens = parseInt(this.value);
+            scopeValueSpan.textContent = scopeSens;
+            calculateSensitivity();
+        });
+
+        sniperSlider.addEventListener('input', function() {
+            sniperSens = parseInt(this.value);
+            sniperValueSpan.textContent = sniperSens;
+            calculateSensitivity();
+        });
+
+        dpiSelect.addEventListener('change', function() {
+            dpi = parseInt(this.value);
+            dpiValueSpan.textContent = dpi;
+            calculateSensitivity();
+        });
+
+        // Calculate sensitivity function
+        function calculateSensitivity() {
+            const baseDPI = 400;
+            const dpiMultiplier = dpi / baseDPI;
+            
+            // Multiplier untuk setiap scope (berdasarkan riset akurat FF)
+            const generalMultiplier = 1.0;
+            const redDotMultiplier = 0.85;
+            const scopeMultiplier = 0.7;
+            const sniperMultiplier = 0.5;
+
+            const calcGeneral = (generalSens / 100) * dpiMultiplier * generalMultiplier;
+            const calcRedDot = (redDotSens / 100) * dpiMultiplier * redDotMultiplier;
+            const calcScope = (scopeSens / 100) * dpiMultiplier * scopeMultiplier;
+            const calcSniper = (sniperSens / 100) * dpiMultiplier * sniperMultiplier;
+            
+            // True sensitivity (rata-rata weighted)
+            const trueSens = (calcGeneral * 0.4) + (calcRedDot * 0.3) + (calcScope * 0.2) + (calcSniper * 0.1);
+
+            // Update results
+            generalResult.textContent = (Math.round(calcGeneral * 100) / 100).toFixed(2);
+            redDotResult.textContent = (Math.round(calcRedDot * 100) / 100).toFixed(2);
+            scopeResult.textContent = (Math.round(calcScope * 100) / 100).toFixed(2);
+            sniperResult.textContent = (Math.round(calcSniper * 100) / 100).toFixed(2);
+            trueSensResult.textContent = (Math.round(trueSens * 100) / 100).toFixed(2);
+        }
+
+        // Reset function
+        function resetValues() {
+            generalSens = 50;
+            redDotSens = 50;
+            scopeSens = 50;
+            sniperSens = 50;
+            dpi = 400;
+
+            generalSlider.value = 50;
+            redDotSlider.value = 50;
+            scopeSlider.value = 50;
+            sniperSlider.value = 50;
+            dpiSelect.value = 400;
+
+            generalValueSpan.textContent = 50;
+            redDotValueSpan.textContent = 50;
+            scopeValueSpan.textContent = 50;
+            sniperValueSpan.textContent = 50;
+            dpiValueSpan.textContent = 400;
+
+            calculateSensitivity();
+        }
+
+        // Copy settings function
+        function copySettings() {
+            const trueSens = trueSensResult.textContent;
+            const settings = `FF TOOLSPRO+ Settings:
+General: ${generalSens}
+Red Dot: ${redDotSens}
+2x-4x Scope: ${scopeSens}
+Sniper: ${sniperSens}
+DPI: ${dpi}
+True Sens: ${trueSens}`;
+            
+            navigator.clipboard.writeText(settings).then(function() {
+                alert('Settings berhasil di-copy!');
+            }).catch(function() {
+                console.log('Copy gagal');
+            });
+        }
+
+        // Initialize calculator on page load
+        window.addEventListener('load', function() {
+            calculateSensitivity();
+        });
+    </script>
+</body>
+</html>
